@@ -1,43 +1,64 @@
 @font-face {
   font-family: Gotham;
-  src: url("../fonts/Gotham-Medium.otf"); }
+  src: url("../fonts/Gotham-Medium.otf");
+}
 @font-face {
   font-family: Gotham;
   font-weight: bold;
-  src: url("../fonts/Gotham-Bold.otf"); }
+  src: url("../fonts/Gotham-Bold.otf");
+}
 @font-face {
   font-family: Gotham;
   font-weight: lighter;
-  src: url("../fonts/Gotham-Light.otf"); }
+  src: url("../fonts/Gotham-Light.otf");
+}
 main {
-  background-color: #003366; }
-  main .container-fluid {
-    background: #3399cc;
-    background: radial-gradient(circle at center 250%, #3399cc, #3399cc, transparent); }
+  background-color: #003366;
+}
+main .container-fluid {
+  background: #3399cc;
+  background: radial-gradient(circle at center 250%, #3399cc, #3399cc, transparent);
+}
 
 .reviews .review {
-  border-bottom: 1px solid #497baa; }
-  .reviews .review:last-child {
-    border: none; }
-  .reviews .review .avatar span {
-    font-size: 0.916rem; }
-    .reviews .review .avatar span.name {
-      font-size: 1.083rem; }
-  .reviews .review .read p {
-    font-size: 0.916rem; }
-  .reviews .review .read a {
-    font-size: 0.833rem; }
-    .reviews .review .read a:after {
-      content: "";
-      background: url("/images/read.png") no-repeat center right;
-      padding-right: 18px; }
+  border-bottom: 1px solid #497baa;
+}
+.reviews .review:last-child {
+  border: none;
+}
+.reviews .review .avatar span {
+  font-size: 0.916rem;
+}
+.reviews .review .avatar span.name {
+  font-size: 1.083rem;
+}
+.reviews .review .read p {
+  font-size: 0.916rem;
+}
+.reviews .review .read a {
+  font-size: 0.833rem;
+}
+.reviews .review .read a:after {
+  content: "";
+  background: url("/images/read.png") no-repeat center right;
+  padding-right: 18px;
+}
 
-.icon:before {
+.icon:before, .icon:after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+}
+
+.bulleted:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f111";
+  font-size: 8px;
+  color: #ddd;
+}
 
 .select-box {
   position: relative;
@@ -46,72 +67,135 @@ main {
   margin: 0 auto;
   font-family: "Open Sans", "Helvetica Neue", "Segoe UI", "Calibri", "Arial", sans-serif;
   font-size: 18px;
-  color: #60666d; }
-  @media (min-width: 768px) {
-    .select-box {
-      width: 70%; } }
-  @media (min-width: 992px) {
-    .select-box {
-      width: 50%; } }
-  @media (min-width: 1200px) {
-    .select-box {
-      width: 30%; } }
-  .select-box__current {
-    position: relative;
-    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    outline: none; }
-    .select-box__current:focus + .select-box__list {
-      opacity: 1;
-      animation-name: none; }
-      .select-box__current:focus + .select-box__list .select-box__option {
-        cursor: pointer; }
-    .select-box__current:focus .select-box__icon {
-      transform: translateY(-50%) rotate(180deg); }
-  .select-box__icon {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    width: 20px;
-    opacity: 0.3;
-    transition: 0.2s ease; }
-  .select-box__value {
-    display: flex; }
-  .select-box__input {
-    display: none; }
-    .select-box__input:checked + .select-box__input-text {
-      display: block; }
-  .select-box__input-text {
-    display: none;
-    width: 100%;
-    margin: 0;
-    padding: 15px;
-    background-color: #fff; }
-  .select-box__list {
-    position: absolute;
-    width: 100%;
-    padding: 0;
-    list-style: none;
-    opacity: 0;
-    animation-name: HideList;
-    animation-duration: 0.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: step-start;
-    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1); }
-  .select-box__option {
-    display: block;
-    padding: 15px;
-    background-color: #fff; }
-    .select-box__option:hover, .select-box__option:focus {
-      color: #546c84;
-      background-color: #fbfbfb; }
+  color: #60666d;
+}
+.select-box__current {
+  position: relative;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+.select-box__current:focus + .select-box__list {
+  opacity: 1;
+  margin-top: 10px;
+  animation-name: none;
+}
+.select-box__current:focus + .select-box__list .select-box__option {
+  cursor: pointer;
+}
+.select-box__current:focus .select-box__icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+.select-box__icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+  opacity: 0.3;
+  transition: 0.2s ease;
+}
+.select-box__value {
+  display: flex;
+}
+.select-box__input {
+  display: none;
+}
+.select-box__input:checked + .select-box__input-text {
+  display: block;
+}
+.select-box__input-text {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  background-color: #fff;
+}
+.select-box__list {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  animation-name: HideList;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: step-start;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+.select-box__option {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+}
+.select-box__option:hover, .select-box__option:focus {
+  color: #546c84;
+  background-color: #fbfbfb;
+}
 
 @keyframes HideList {
   from {
-    transform: scaleY(1); }
+    transform: scaleY(1);
+  }
   to {
-    transform: scaleY(0); } }
+    transform: scaleY(0);
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  margin: 10% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+.modal-header h2, .modal-footer h3 {
+  margin: 0;
+}
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.modal-header .close {
+  color: red;
+}
+.modal-header .close:hover {
+  cursor: pointer;
+}
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+}
+.modal-footer {
+  background: var(--modal-color);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
