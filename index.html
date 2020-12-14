@@ -16,21 +16,17 @@
 </head>
 
 <body>
-   <!-- <div class="container">
-      <div class="row" style="background-color:red">
-         <div class="col">1</div>
-         <div class="col"><i class="fas fa-star fa-xs"></i></div>
-         <div class="col">3</div>
-      </div>
-   </div> -->
-
    <header>
-      <div class="container d-flex justify-content-between">
-         <p>logo</p>
-         <ul class="list-unstyled  fw-bold">
-            <li><i class="fas fa-check fa-xs text-success"></i> some text</li>
-            <li><i class="fas fa-check fa-xs text-success"></i> some text</li>
-            <li><i class="fas fa-check fa-xs text-success"></i> some text</li>
+      <div class="container d-flex justify-content-between align-items-center py-3">
+         <div class="brand d-inline-flex align-items-end">
+            <h1 class="m-0">LegalMatch</h1>
+            <p class="slogan text-uppercase fw-bold fs-5">Find the right lawyer now</p>
+         </div>
+
+         <ul class="list-unstyled fs-6 m-0">
+            <li><i class="fas fa-check fa-xs text-success fw-bold"></i> No fee to present your case</li>
+            <li><i class="fas fa-check fa-xs text-success fw-bold"></i> Choose from lawyers in your area</li>
+            <li><i class="fas fa-check fa-xs text-success fw-bold"></i> A 100% confidential service</li>
          </ul>
       </div>
    </header>
@@ -39,7 +35,7 @@
    <main>
       <div class="container-fluid py-3">
          <div class="container">
-            <button id="modal-btn" class="button">Click Here</button>
+            <!-- <button id="modal-btn" class="button">Click Here</button> -->
 
             <div class="row pb-3">
                <div class="col">
@@ -51,46 +47,105 @@
             <div class="row d-flex justify-content-between">
                <div class="col-md-6">
                   <div class="pe-5">
-                     <div class="select-box ">
-                        <div class="select-box__current" tabindex="1">
+                     <p class="text-light fs-5 mb-2">Enter Zip Code or City:</p>
+                     <div class="zip-input mb-4 rounded-pill overflow-hidden">
+                        <span class="badge rounded-circle bg-warning ">1</span>
+                        <input class="form-control form-control-lg " type="text"
+                           placeholder="Does not have to be where you leave" aria-label=".form-control-lg ">
+                     </div>
+
+                     <p class="text-light fs-5 mb-2">Choose a category:</p>
+                     <div class="select-box ui-field mb-3">
+                        <div class="select-box__current overflow-hidden rounded-pill" tabindex="1">
+                           <span class="badge rounded-circle bg-warning ">2</span>
+
                            <div class="select-box__value">
-                              <input class="select-box__input" type="radio" id="0" value="1" name="Ben"
+                              <input class="select-box__input" type="radio" id="x" value="x" name="Ben"
                                  checked="checked" />
-                              <p class="select-box__input-text">Cream</p>
+                              <p class="select-box__input-text">Click to choose a legal category</p>
+                           </div>
+
+                           <div class="select-box__value">
+                              <input class="select-box__input" type="radio" id="0" value="1" name="Ben" />
+                              <p class="select-box__input-text">Family</p>
                            </div>
                            <div class="select-box__value"><input class="select-box__input" type="radio" id="1" value="2"
                                  name="Ben" />
-                              <p class="select-box__input-text">Cheese</p>
+                              <p class="select-box__input-text">Criminal Defense</p>
                            </div>
                            <div class="select-box__value"><input class="select-box__input" type="radio" id="2" value="3"
                                  name="Ben" />
-                              <p class="select-box__input-text">Milk</p>
+                              <p class="select-box__input-text">Business</p>
                            </div>
                            <div class="select-box__value"><input class="select-box__input" type="radio" id="3" value="4"
                                  name="Ben" />
-                              <p class="select-box__input-text">Honey</p>
+                              <p class="select-box__input-text">Personal Injury</p>
                            </div>
                            <div class="select-box__value"><input class="select-box__input" type="radio" id="4" value="5"
                                  name="Ben" />
-                              <p class="select-box__input-text">Toast</p>
+                              <p class="select-box__input-text">Backruptcy & Finances</p>
                            </div>
-
+                           <div class="select-box__value"><input class="select-box__input" type="radio" id="5" value="6"
+                                 name="Ben" />
+                              <p class="select-box__input-text">Product and Services</p>
+                           </div>
+                           <div class="select-box__value"><input class="select-box__input" type="radio" id="6" value="7"
+                                 name="Ben" />
+                              <p class="select-box__input-text">Employment</p>
+                           </div>
+                           <div class="select-box__value"><input class="select-box__input" type="radio" id="7" value="8"
+                                 name="Ben" />
+                              <p class="select-box__input-text">Real Estate</p>
+                           </div>
+                           <div class="select-box__value"><input class="select-box__input" type="radio" id="8" value="9"
+                                 name="Ben" />
+                              <p class="select-box__input-text">Immigration</p>
+                           </div>
+                           <div class="select-box__value"><input class="select-box__input" type="radio" id="9"
+                                 value="10" name="Ben" />
+                              <p class="select-box__input-text">Wills, Trusts & Estates</p>
+                           </div>
+                           <div class="select-box__value"><input class="select-box__input" type="radio" id="10"
+                                 value="11" name="Ben" />
+                              <p class="select-box__input-text">Government</p>
+                           </div>
+                           <div class="select-box__value"><input class="select-box__input" type="radio" id="11"
+                                 value="12" name="Ben" />
+                              <p class="select-box__input-text">Intellectual Property</p>
+                           </div>
 
                            <i class="fas fa-chevron-down select-box__icon"></i>
                         </div>
 
                         <ul class="select-box__list">
-                           <li><label class="select-box__option" for="0" aria-hidden="aria-hidden">Cream</label></li>
-                           <li><label class="select-box__option" for="1" aria-hidden="aria-hidden">Cheese</label></li>
-                           <li><label class="select-box__option" for="2" aria-hidden="aria-hidden">Milk</label></li>
-                           <li><label class="select-box__option" for="3" aria-hidden="aria-hidden">Honey</label></li>
-                           <li><label class="select-box__option" for="4" aria-hidden="aria-hidden">Toast</label></li>
+                           <li><label class="select-box__option" for="0" aria-hidden="aria-hidden">Family</label></li>
+                           <li><label class="select-box__option" for="1" aria-hidden="aria-hidden">Criminal
+                                 Defense</label></li>
+                           <li><label class="select-box__option" for="2" aria-hidden="aria-hidden">Business</label></li>
+                           <li><label class="select-box__option" for="3" aria-hidden="aria-hidden">Personal
+                                 Injury</label></li>
+                           <li><label class="select-box__option" for="4" aria-hidden="aria-hidden">Backruptcy &
+                                 Finances</label></li>
+                           <li><label class="select-box__option" for="5" aria-hidden="aria-hidden">Product and
+                                 Services</label></li>
+                           <li><label class="select-box__option" for="6" aria-hidden="aria-hidden">Employment</label>
+                           </li>
+                           <li><label class="select-box__option" for="7" aria-hidden="aria-hidden">Real Estate</label>
+                           </li>
+                           <li><label class="select-box__option" for="8" aria-hidden="aria-hidden">Immigration</label>
+                           </li>
+                           <li><label class="select-box__option" for="9" aria-hidden="aria-hidden">Wills, Trusts &
+                                 Estates</label></li>
+                           <li><label class="select-box__option" for="10" aria-hidden="aria-hidden">Government</label>
+                           </li>
+                           <li><label class="select-box__option" for="11" aria-hidden="aria-hidden">Intellectual
+                                 Property</label></li>
                         </ul>
                      </div>
                   </div>
                </div>
-               <div class="col-md-6">
 
+               <div class="col-md-6">
                   <!-- Clients Review's Section -->
                   <div class="ps-5">
                      <h4 class="text-light mb-4">Clients review LegalMatch layers</h4>
@@ -190,15 +245,10 @@
                         </div>
                      </div>
                   </div>
-
                </div>
             </div>
 
-            <div class="row">
-               <div class="col">
-                  xx
-               </div>
-            </div>
+
          </div>
       </div>
    </main>
@@ -207,7 +257,13 @@
    <footer>
       <div class="container">
          <div class="row py-5">
-            <div class="col-3"><img src="./images/logo.png" alt="" srcset=""></div>
+            <div class="col-3">
+               <div class="brand">
+                  <img src="./images/logo.png" alt="" srcset="">
+                  <p class="slogan text-uppercase fw-bold fs-6" style="margin:-8px 0 0 0">Find the right lawyer now</p>
+               </div>
+            </div>
+
             <div class="col">
                <ul class="list-inline text-secondary text-center">
                   <li class="list-inline-item"><a class="link-secondary text-decoration-none" href="#">User
@@ -219,12 +275,14 @@
                   <li class="list-inline-item"><a class="link-secondary text-decoration-none" href="#">Site Map</a></li>
                </ul>
 
-               <p class="fs-6 text-center mt-5 text-secondary">Copyright 1999-2016 LegalMatch. All rights reserved.
+               <p class="text-center mt-5 text-secondary" style="font-size: 0.833rem;">Copyright 1999-2016 LegalMatch.
+                  All rights reserved.
                   LegalMatch &#174;, the LegalMatch logo, and the address are trademark of LegalMatch Patent Pending.
                </p>
             </div>
+
             <div class="col-3">
-               <div class="text-center">
+               <div class="text-end">
                   <p><img src="./images/trust-e.jpg" alt="" srcset=""></p>
                   <p><img src="./images/bbb-logo.jpg" alt="" srcset=""></p>
                </div>
@@ -236,19 +294,88 @@
 
    <div id="Modal" class="modal">
       <div class="modal-content">
-         <div class="modal-header">
+         <div class="modal-header border-0">
             <h2>Modal Header</h2>
-            <span class="close">X</span>
+            <span class="close fs-3">X</span>
          </div>
-         <div class="modal-body">
-            <p>This is my modal</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa
-               velit
-               repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo
-               commodi ab.</p>
+         <div class="modal-body pt-0 pb-4 px-5">
+            <h4 class="fs-5 mb-4 text-secondary"><span class="badge rounded-circle bg-warning me-3">3</span> Which <b>Family law</b> issue(s) apply to your case?</h4>
+
+            <div class="d-flex justify-content-between">
+               <ul class="list-unstyled mb-0">
+                  <li class="mb-2">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="adoptions">
+                        <label class="form-check-label" for="adoptions">
+                           Adoptions
+                        </label>
+                     </div>
+                  </li>
+                  <li class="mb-2">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="guardianship">
+                        <label class="form-check-label" for="guardianship">
+                           Guardianship
+                        </label>
+                     </div>
+                  </li>
+                  <li class="mb-2">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="custody">
+                        <label class="form-check-label" for="custody">
+                           Child Custody and Visitation
+                        </label>
+                     </div>
+                  </li>
+                  <li class="mb-2">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="paternity">
+                        <label class="form-check-label" for="paternity">
+                           Paternity
+                        </label>
+                     </div>
+                  </li>
+               </ul>
+
+               <ul class="list-unstyled mb-0">
+                  <li class="mb-2">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="childsupport">
+                        <label class="form-check-label" for="childsupport">
+                           Child Support
+                        </label>
+                     </div>
+                  </li>
+                  <li class="mb-2">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="separations">
+                        <label class="form-check-label" for="separations">
+                           Separations
+                        </label>
+                     </div>
+                  </li>
+                  <li class="mb-2">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Divorse">
+                        <label class="form-check-label" for="Divorse">
+                           Divorce
+                        </label>
+                     </div>
+                  </li>
+                  <li class="mb-2">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="alimony">
+                        <label class="form-check-label" for="alimony">
+                           Spousal Support or Alimony
+                        </label>
+                     </div>
+                  </li>
+               </ul>
+            </div>
          </div>
-         <div class="modal-footer">
-            <h3>Modal Footer</h3>
+         <div class="modal-footer border-0 p-0 pb-2 text-center">
+            <button class="btn btn-primary btn-lg text-uppercase rounded-pill px-4 mx-auto mb-4">find a lawyer
+               now</button>
          </div>
       </div>
    </div>

@@ -12,9 +12,19 @@
    font-weight: lighter;
    src: url("../fonts/Gotham-Light.otf");
 }
-// body {
-//    font-family: "Gotham", sans-serif;
-// }
+.brand {
+   h1 {
+      background: url("../images/lm-logo.jpg") no-repeat 0 0;
+      text-indent: -9999px;
+      width: 290px;
+      height: 52px;
+   }
+   .slogan {
+      color: #001f5a;
+      margin: 0 0 6px 15px;
+   }
+}
+
 main {
    background-color: #003366;
 
@@ -75,6 +85,7 @@ main {
       -webkit-font-smoothing: antialiased;
    }
 }
+
 .bulleted {
    &:after {
       font-family: "Font Awesome 5 Free";
@@ -85,6 +96,20 @@ main {
    }
 }
 
+.zip-input {
+   position: relative;
+   .badge {
+      position: absolute;
+      top: 30%;
+      left: 15px;
+   }
+   input[type="text"] {
+      padding: 14px 15px;
+      padding-left: 55px;
+      font-size: 14px;
+      border-radius: 0 !important;
+   }
+}
 .select-box {
    position: relative;
    display: block;
@@ -147,6 +172,7 @@ main {
       width: 100%;
       margin: 0;
       padding: 15px;
+      padding-left: 55px;
       background-color: #fff;
    }
 
@@ -183,6 +209,39 @@ main {
    }
 }
 
+.ui {
+   &-field {
+      .select-box {
+         &__current {
+            .badge {
+               position: absolute;
+               top: 30%;
+               left: 15px;
+            }
+         }
+         &__input-text,
+         &__option {
+            font-size: 14px;
+         }
+         &__list {
+            border-radius: 1rem;
+            background-color: #fff;
+            padding: 15px;
+         }
+         &__option {
+            padding: 4px 45px;
+            font-weight: 500;
+            color: #666;
+            &:hover,
+            &:focus {
+               color: #333;
+               background-color: #bcd3e3;
+            }
+         }
+      }
+   }
+}
+
 @keyframes HideList {
    from {
       transform: scaleY(1);
@@ -204,7 +263,7 @@ main {
    background-color: rgba(0, 0, 0, 0.5);
    &-content {
       margin: 10% auto;
-      width: 60%;
+      width: 35%;
       box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
       animation-name: modalopen;
       animation-duration: var(--modal-duration);
@@ -221,7 +280,7 @@ main {
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       .close {
-         color: red;
+         color: #333;
          &:hover {
             cursor: pointer;
          }

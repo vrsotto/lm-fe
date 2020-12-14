@@ -1,15 +1,14 @@
 const modal = document.querySelector("#Modal");
 // const modalBtn = document.querySelector(".select-box__option");
-const listItem = document.querySelector(".select-box__option");
+const listItem = document.querySelectorAll(".select-box__option");
 const closeBtn = document.querySelector(".close");
 
 // Events
 // modalBtn.addEventListener("click", openModal);
 
-listItem.addEventListener("mousedown", function (event) {
-   event.preventDefault();
-   modal.style.display = "block";
-});
+for (var i = 0; i < listItem.length; i++) {
+   listItem[i].addEventListener("click", openModal);
+}
 
 closeBtn.addEventListener("click", closeModal);
 window.addEventListener("click", outsideClick);
